@@ -1,0 +1,99 @@
+html,
+body {
+	margin: 0;
+	background-color: #ddd;
+	overflow: hidden;
+}
+
+@font-face {
+	font-family: '閹割unifont';
+	src: url('/fonts/閹割unifont-Medium.woff2') format('woff2');
+	font-display: swap;
+}
+
+#主䈎框 {
+	position: absolute;
+	width: calc(100% - 14vw);
+	height: calc(100% - 14vh);
+	top: 7vh;
+	left: 7vw;
+	border: 1px solid black;
+	outline: 1px solid black;
+	outline-offset: 7px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#它丹漢文標題圖象 {
+	width: 80%;
+	max-height: 45%;
+	user-select: none;
+}
+
+#它丹漢文標題英文 {
+	margin-top: -43px;
+	max-height: 6%;
+	/* font-size: 150%;
+	--間距: 3.7vw;
+	letter-spacing: var(--間距);
+	transform: translateX(calc(var(--間距) / 2)); */
+	opacity: 50%;
+	user-select: none;
+}
+
+#buttons {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 20%;
+	max-height: 20%;
+	user-select: none;
+}
+
+#buttons>* {
+	font-family: "閹割unifont";
+	color: black;
+	font-size: 170%;
+	background-color: transparent;
+	border: none;
+	transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	padding: 3% 6%;
+	border-radius: 7px;
+	outline: 2px solid transparent;
+	user-select: none;
+}
+
+#buttons>*:hover {
+	color: #333;
+	background-color: #33333310;
+	outline-color: #000;
+	cursor: pointer;
+}
+
+#buttons>*:active {
+	color: white;
+	background-color: black;
+}
+
+#內容 {
+	font-size: 120%;
+	position: absolute;
+	writing-mode: vertical-rl;
+	font-family: "閹割unifont";
+	bottom: 4vh;
+	max-height: 40%;
+}
+
+#內容::selection,
+#內容 *::selection {
+	color: #ddd;
+	background-color: #000000;
+}
+
+#內容 a::selection {
+	color: #c3c5c7;
+	background-color: #000000;
+}
